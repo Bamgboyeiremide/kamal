@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Result UI</title>
+  <title>Result UI with Icons</title>
+
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
   <style>
     /* Resetting margin and padding for all elements */
@@ -15,7 +18,7 @@
     }
 
     body {
-      background-color: #f5f7fa;
+      background-color: #f0f2f5;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -26,34 +29,36 @@
     .container {
       display: flex;
       background-color: white;
-      border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       max-width: 800px;
       width: 100%;
       transition: all 0.3s ease-in-out;
+      border-radius: 30px; /* Smooth border radius */
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     }
 
     /* Left Section (Result) */
     .result {
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      background: linear-gradient(135deg, #6A11CB, #2575FC);
       color: white;
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 40px;
+      padding: 50px;
+      border-radius: 30px; /* Consistent border radius */
     }
 
     .result h1 {
-      font-size: 80px;
+      font-size: 76px;
       margin-bottom: 10px;
     }
 
     .result h3 {
       font-size: 24px;
       margin-bottom: 15px;
+      opacity: 0.9;
     }
 
     .result p {
@@ -70,11 +75,14 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      background-color: #fff;
+      border-radius: 30px; /* Matching border radius */
     }
 
     .summary h2 {
       font-size: 24px;
       margin-bottom: 20px;
+      color: #333;
     }
 
     .summary-item {
@@ -82,14 +90,43 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 15px;
+      background-color: #f0f2f5;
+      padding: 12px 20px;
+      border-radius: 15px;
+    }
+
+    .summary-item i {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    /* Custom Icon Colors */
+    .summary-item.reaction i {
+      color: red;
+    }
+
+    .summary-item.memory i {
+      color: orange;
+    }
+
+    .summary-item.verbal i {
+      color: blue;
+    }
+
+    .summary-item.visual i {
+      color: purple;
     }
 
     .summary-item span {
       font-size: 18px;
+      display: flex;
+      align-items: center;
+      color: #333;
     }
 
     .summary-item .score {
       font-weight: bold;
+      color: #6A11CB;
     }
 
     .continue-button {
@@ -97,7 +134,7 @@
       color: white;
       padding: 15px;
       border: none;
-      border-radius: 10px;
+      border-radius: 15px;
       cursor: pointer;
       text-align: center;
       font-size: 16px;
@@ -185,23 +222,23 @@
     <div class="summary">
       <h2>Summary</h2>
 
-      <div class="summary-item">
-        <span>Reaction</span>
+      <div class="summary-item reaction">
+        <span><i class="fas fa-bolt"></i> Reaction</span>
         <span class="score">80 / 100</span>
       </div>
 
-      <div class="summary-item">
-        <span>Memory</span>
+      <div class="summary-item memory">
+        <span><i class="fas fa-brain"></i> Memory</span>
         <span class="score">92 / 100</span>
       </div>
 
-      <div class="summary-item">
-        <span>Verbal</span>
+      <div class="summary-item verbal">
+        <span><i class="fas fa-comments"></i> Verbal</span>
         <span class="score">61 / 100</span>
       </div>
 
-      <div class="summary-item">
-        <span>Visual</span>
+      <div class="summary-item visual">
+        <span><i class="fas fa-eye"></i> Visual</span>
         <span class="score">72 / 100</span>
       </div>
 
